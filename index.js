@@ -5,7 +5,7 @@ app.set('port', (process.env.PORT || 1337))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('Fiap 2TINR')
+  response.send('Fiap 2018 TESTE Deploy')
 })
 
 app.listen(app.get('port'), function() {
