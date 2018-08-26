@@ -12,7 +12,7 @@ Crie um Dockerfile com as especificacoes abaixo:
 ```sh
 FROM node:carbon
 
-# Create app directory dir
+# Create app directory
 WORKDIR /usr/src/app
 
 # Install app dependencies
