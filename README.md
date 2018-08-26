@@ -27,7 +27,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
+EXPOSE 5000
 CMD [ "npm", "start" ]
 ```
 
@@ -44,5 +44,5 @@ docker build -t mynode-app .
 Por padrao ao executar seu container ele utiliza a porta [localhost:5000](http://localhost:5000/) do node, dessa forma para rodar seu container alterando a porta utilize a propriedade PORT, um recursos da propria linguagem node:
 
 ```sh
-docker run -d -p 8080:8080 -e PORT=8080 mynode-app
+docker run -d -p 8080:5000 mytest-app
 ```
