@@ -1,4 +1,4 @@
-# Container rodando node-js com micro test..
+# Container rodando node-js com micro test.....
 
 Uma app simples em node usando [Express 4](http://expressjs.com/).
 
