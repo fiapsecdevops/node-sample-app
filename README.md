@@ -1,48 +1,19 @@
-# Container rodando node-js com micro test.
+# nodejs - Hello Microservices
 
-Uma app simples em node usando [Express 4](http://expressjs.com/).
+Sample app running in [Express 4](http://expressjs.com/) and Docker
 
-## Fiap - SecDevops
-Teste de webhook básico
+## Build:
 
-## Build da Imagem:
-
-Crie um Dockerfile com as especificacoes abaixo:
+Using a docker environrment run:
 
 ```sh
-FROM node:carbon
-
-# Create app directory dir
-WORKDIR /usr/src/app
-
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
-RUN npm install
-# If you are building your code for production
-# RUN npm install --only=production
-
-# Bundle app source
-COPY . .
-
-EXPOSE 5000
-CMD [ "npm", "start" ]
+docker build -t nodeapp-micro .
 ```
 
-Em seguida faça o build de seu novo container_
+## Running:
+
+Just run Docker application using port 5000 from localhost as default to expose app using express and try to hit using localhost:5000
 
 ```sh
-docker build -t mynode-app .
-```
-
-
-
-## Executando o container:
-
-Por padrao ao executar seu container ele utiliza a porta [localhost:5000](http://localhost:5000/) do node, dessa forma para rodar seu container alterando a porta utilize a propriedade PORT, um recursos da propria linguagem node:
-
-```sh
-docker run -d -p 8080:5000 mytest-app
+docker run -d -p 5000:5000 nodeapp-micro
 ```
